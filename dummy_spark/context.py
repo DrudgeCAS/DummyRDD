@@ -451,7 +451,7 @@ class SparkContext(object):
         :param rdds:
         :return:
         """
-        raise NotImplementedError
+        return RDD([j for i in rdds for j in i.collect()], self, None)
 
     def broadcast(self, value):
         """
