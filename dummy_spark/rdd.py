@@ -632,7 +632,10 @@ class RDD(object):
         :param combOp:
         :return:
         """
-        raise NotImplementedError
+
+        for i in self._jrdd:
+            zeroValue = seqOp(zeroValue, i)
+        return zeroValue
 
     def treeAggregate(self, zeroValue, seqOp, combOp, depth=2):
         """
