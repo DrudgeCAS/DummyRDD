@@ -460,7 +460,7 @@ class SparkContext(object):
         :param value:
         :return:
         """
-        raise NotImplementedError
+        return Broadcast(value)
 
     def accumulator(self, value, accum_param=None):
         """
@@ -598,3 +598,14 @@ class SparkContext(object):
         :return:
         """
         raise NotImplementedError
+
+
+class Broadcast:
+    """Broadcast variables.
+    """
+
+    __slots__ = ['value']
+
+    def __init__(self, value):
+        """Initialize the broadcast variable with given value."""
+        self.value = value
