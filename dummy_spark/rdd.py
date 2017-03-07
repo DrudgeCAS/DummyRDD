@@ -601,7 +601,7 @@ class RDD(object):
         :param f:
         :return:
         """
-        raise NotImplementedError
+        return reduce(f, self._jrdd)
 
     def treeReduce(self, f, depth=2):
         """
