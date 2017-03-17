@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
+import collections
 import random
 import uuid
 from functools import reduce
+
 from dummy_spark.resultsiterable import ResultIterable
 
 __author__ = 'willmcginnis'
@@ -848,7 +850,7 @@ class RDD(object):
 
         :return:
         """
-        raise NotImplementedError
+        return collections.Counter(i for i, _ in self._jrdd)
 
     def join(self, other, numPartitions=None):
         """
