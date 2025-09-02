@@ -16,7 +16,11 @@ classifiers = [
   "Programming Language :: Python :: 3",
 ]
 keywords = ["pyspark", "spark", "testing"]
-dependencies = ["pytest"]
+dependencies = []
+
+[project.optional-dependencies]
+docs = ["sphinx"]
+dev = ["pytest"]
 
 [project.urls]
 Homepage = "https://github.com/DrudgeCAS/DummyRDD"
