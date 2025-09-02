@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dummyrdd"
+version = "0.0.8.dev0"
+description = "A pure python mocked version of pyspark's rdd class"
+requires-python = "==3.9.*"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Will McGinnis", email = "will@pedalwrencher.com" }]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+]
+keywords = ["pyspark", "spark", "testing"]
+dependencies = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/DrudgeCAS/DummyRDD"
+
+[tool.setuptools]
+# keep package discovery consistent with find_packages(exclude=['tests*'])
+packages = { find = { exclude = ["tests*"] } }
+include-package-data = true
