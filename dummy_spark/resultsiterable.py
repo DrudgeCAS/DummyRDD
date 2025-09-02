@@ -22,7 +22,7 @@ import collections
 __all__ = ["ResultIterable"]
 
 
-class ResultIterable(collections.Iterable):
+class ResultIterable(collections.abc.Iterable):
 
     """
     A special result iterable. This is used because the standard

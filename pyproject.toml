@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "dummyrdd"
 version = "0.0.8.dev0"
 description = "A pure python mocked version of pyspark's rdd class"
-requires-python = "==3.9.*"
+requires-python = "==3.12.*"
 readme = "README.md"
 license = "MIT"
 authors = [{ name = "Will McGinnis", email = "will@pedalwrencher.com" }]
